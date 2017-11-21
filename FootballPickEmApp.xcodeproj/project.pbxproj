@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D0C25EC81FC4CE9300DB03CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C25EC71FC4CE9300DB03CD /* AppDelegate.swift */; };
+		D0C25ECA1FC4CE9300DB03CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C25EC91FC4CE9300DB03CD /* ViewController.swift */; };
+		D0C25ECD1FC4CE9300DB03CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C25ECB1FC4CE9300DB03CD /* Main.storyboard */; };
+		D0C25ECF1FC4CE9300DB03CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0C25ECE1FC4CE9300DB03CD /* Assets.xcassets */; };
+		D0C25ED21FC4CE9300DB03CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C25ED01FC4CE9300DB03CD /* LaunchScreen.storyboard */; };
+		D0C25EDD1FC4CE9300DB03CD /* FootballPickEmAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C25EDC1FC4CE9300DB03CD /* FootballPickEmAppTests.swift */; };
+		D0C25EE81FC4CE9300DB03CD /* FootballPickEmAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C25EE71FC4CE9300DB03CD /* FootballPickEmAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D0C25ED91FC4CE9300DB03CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0C25EBC1FC4CE9300DB03CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0C25EC31FC4CE9300DB03CD;
+			remoteInfo = FootballPickEmApp;
+		};
+		D0C25EE41FC4CE9300DB03CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D0C25EBC1FC4CE9300DB03CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D0C25EC31FC4CE9300DB03CD;
+			remoteInfo = FootballPickEmApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D0C25EC41FC4CE9300DB03CD /* FootballPickEmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballPickEmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C25EC71FC4CE9300DB03CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D0C25EC91FC4CE9300DB03CD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D0C25ECC1FC4CE9300DB03CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0C25ECE1FC4CE9300DB03CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0C25ED11FC4CE9300DB03CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D0C25ED31FC4CE9300DB03CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0C25ED81FC4CE9300DB03CD /* FootballPickEmAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballPickEmAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C25EDC1FC4CE9300DB03CD /* FootballPickEmAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballPickEmAppTests.swift; sourceTree = "<group>"; };
+		D0C25EDE1FC4CE9300DB03CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0C25EE31FC4CE9300DB03CD /* FootballPickEmAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballPickEmAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0C25EE71FC4CE9300DB03CD /* FootballPickEmAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballPickEmAppUITests.swift; sourceTree = "<group>"; };
+		D0C25EE91FC4CE9300DB03CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D0C25EC11FC4CE9300DB03CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C25ED51FC4CE9300DB03CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C25EE01FC4CE9300DB03CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D0C25EBB1FC4CE9300DB03CD = {
+			isa = PBXGroup;
+			children = (
+				D0C25EC61FC4CE9300DB03CD /* FootballPickEmApp */,
+				D0C25EDB1FC4CE9300DB03CD /* FootballPickEmAppTests */,
+				D0C25EE61FC4CE9300DB03CD /* FootballPickEmAppUITests */,
+				D0C25EC51FC4CE9300DB03CD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D0C25EC51FC4CE9300DB03CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D0C25EC41FC4CE9300DB03CD /* FootballPickEmApp.app */,
+				D0C25ED81FC4CE9300DB03CD /* FootballPickEmAppTests.xctest */,
+				D0C25EE31FC4CE9300DB03CD /* FootballPickEmAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0C25EC61FC4CE9300DB03CD /* FootballPickEmApp */ = {
+			isa = PBXGroup;
+			children = (
+				D0C25EC71FC4CE9300DB03CD /* AppDelegate.swift */,
+				D0C25EC91FC4CE9300DB03CD /* ViewController.swift */,
+				D0C25ECB1FC4CE9300DB03CD /* Main.storyboard */,
+				D0C25ECE1FC4CE9300DB03CD /* Assets.xcassets */,
+				D0C25ED01FC4CE9300DB03CD /* LaunchScreen.storyboard */,
+				D0C25ED31FC4CE9300DB03CD /* Info.plist */,
+			);
+			path = FootballPickEmApp;
+			sourceTree = "<group>";
+		};
+		D0C25EDB1FC4CE9300DB03CD /* FootballPickEmAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D0C25EDC1FC4CE9300DB03CD /* FootballPickEmAppTests.swift */,
+				D0C25EDE1FC4CE9300DB03CD /* Info.plist */,
+			);
+			path = FootballPickEmAppTests;
+			sourceTree = "<group>";
+		};
+		D0C25EE61FC4CE9300DB03CD /* FootballPickEmAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D0C25EE71FC4CE9300DB03CD /* FootballPickEmAppUITests.swift */,
+				D0C25EE91FC4CE9300DB03CD /* Info.plist */,
+			);
+			path = FootballPickEmAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D0C25EC31FC4CE9300DB03CD /* FootballPickEmApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0C25EEC1FC4CE9300DB03CD /* Build configuration list for PBXNativeTarget "FootballPickEmApp" */;
+			buildPhases = (
+				D0C25EC01FC4CE9300DB03CD /* Sources */,
+				D0C25EC11FC4CE9300DB03CD /* Frameworks */,
+				D0C25EC21FC4CE9300DB03CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FootballPickEmApp;
+			productName = FootballPickEmApp;
+			productReference = D0C25EC41FC4CE9300DB03CD /* FootballPickEmApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D0C25ED71FC4CE9300DB03CD /* FootballPickEmAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0C25EEF1FC4CE9300DB03CD /* Build configuration list for PBXNativeTarget "FootballPickEmAppTests" */;
+			buildPhases = (
+				D0C25ED41FC4CE9300DB03CD /* Sources */,
+				D0C25ED51FC4CE9300DB03CD /* Frameworks */,
+				D0C25ED61FC4CE9300DB03CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0C25EDA1FC4CE9300DB03CD /* PBXTargetDependency */,
+			);
+			name = FootballPickEmAppTests;
+			productName = FootballPickEmAppTests;
+			productReference = D0C25ED81FC4CE9300DB03CD /* FootballPickEmAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D0C25EE21FC4CE9300DB03CD /* FootballPickEmAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0C25EF21FC4CE9300DB03CD /* Build configuration list for PBXNativeTarget "FootballPickEmAppUITests" */;
+			buildPhases = (
+				D0C25EDF1FC4CE9300DB03CD /* Sources */,
+				D0C25EE01FC4CE9300DB03CD /* Frameworks */,
+				D0C25EE11FC4CE9300DB03CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0C25EE51FC4CE9300DB03CD /* PBXTargetDependency */,
+			);
+			name = FootballPickEmAppUITests;
+			productName = FootballPickEmAppUITests;
+			productReference = D0C25EE31FC4CE9300DB03CD /* FootballPickEmAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D0C25EBC1FC4CE9300DB03CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "Justin Kalan";
+				TargetAttributes = {
+					D0C25EC31FC4CE9300DB03CD = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					D0C25ED71FC4CE9300DB03CD = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D0C25EC31FC4CE9300DB03CD;
+					};
+					D0C25EE21FC4CE9300DB03CD = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D0C25EC31FC4CE9300DB03CD;
+					};
+				};
+			};
+			buildConfigurationList = D0C25EBF1FC4CE9300DB03CD /* Build configuration list for PBXProject "FootballPickEmApp" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D0C25EBB1FC4CE9300DB03CD;
+			productRefGroup = D0C25EC51FC4CE9300DB03CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D0C25EC31FC4CE9300DB03CD /* FootballPickEmApp */,
+				D0C25ED71FC4CE9300DB03CD /* FootballPickEmAppTests */,
+				D0C25EE21FC4CE9300DB03CD /* FootballPickEmAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D0C25EC21FC4CE9300DB03CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C25ED21FC4CE9300DB03CD /* LaunchScreen.storyboard in Resources */,
+				D0C25ECF1FC4CE9300DB03CD /* Assets.xcassets in Resources */,
+				D0C25ECD1FC4CE9300DB03CD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C25ED61FC4CE9300DB03CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C25EE11FC4CE9300DB03CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D0C25EC01FC4CE9300DB03CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C25ECA1FC4CE9300DB03CD /* ViewController.swift in Sources */,
+				D0C25EC81FC4CE9300DB03CD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C25ED41FC4CE9300DB03CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C25EDD1FC4CE9300DB03CD /* FootballPickEmAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0C25EDF1FC4CE9300DB03CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0C25EE81FC4CE9300DB03CD /* FootballPickEmAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D0C25EDA1FC4CE9300DB03CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0C25EC31FC4CE9300DB03CD /* FootballPickEmApp */;
+			targetProxy = D0C25ED91FC4CE9300DB03CD /* PBXContainerItemProxy */;
+		};
+		D0C25EE51FC4CE9300DB03CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D0C25EC31FC4CE9300DB03CD /* FootballPickEmApp */;
+			targetProxy = D0C25EE41FC4CE9300DB03CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D0C25ECB1FC4CE9300DB03CD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0C25ECC1FC4CE9300DB03CD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D0C25ED01FC4CE9300DB03CD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0C25ED11FC4CE9300DB03CD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D0C25EEA1FC4CE9300DB03CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D0C25EEB1FC4CE9300DB03CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D0C25EED1FC4CE9300DB03CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FootballPickEmApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Justin-Kalan.FootballPickEmApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D0C25EEE1FC4CE9300DB03CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FootballPickEmApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Justin-Kalan.FootballPickEmApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D0C25EF01FC4CE9300DB03CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FootballPickEmAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Justin-Kalan.FootballPickEmAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootballPickEmApp.app/FootballPickEmApp";
+			};
+			name = Debug;
+		};
+		D0C25EF11FC4CE9300DB03CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FootballPickEmAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Justin-Kalan.FootballPickEmAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FootballPickEmApp.app/FootballPickEmApp";
+			};
+			name = Release;
+		};
+		D0C25EF31FC4CE9300DB03CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FootballPickEmAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Justin-Kalan.FootballPickEmAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FootballPickEmApp;
+			};
+			name = Debug;
+		};
+		D0C25EF41FC4CE9300DB03CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = FootballPickEmAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Justin-Kalan.FootballPickEmAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FootballPickEmApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D0C25EBF1FC4CE9300DB03CD /* Build configuration list for PBXProject "FootballPickEmApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C25EEA1FC4CE9300DB03CD /* Debug */,
+				D0C25EEB1FC4CE9300DB03CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0C25EEC1FC4CE9300DB03CD /* Build configuration list for PBXNativeTarget "FootballPickEmApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C25EED1FC4CE9300DB03CD /* Debug */,
+				D0C25EEE1FC4CE9300DB03CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0C25EEF1FC4CE9300DB03CD /* Build configuration list for PBXNativeTarget "FootballPickEmAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C25EF01FC4CE9300DB03CD /* Debug */,
+				D0C25EF11FC4CE9300DB03CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0C25EF21FC4CE9300DB03CD /* Build configuration list for PBXNativeTarget "FootballPickEmAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0C25EF31FC4CE9300DB03CD /* Debug */,
+				D0C25EF41FC4CE9300DB03CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D0C25EBC1FC4CE9300DB03CD /* Project object */;
+}
