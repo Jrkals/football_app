@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 class RegistrationViewController: UIViewController {
-    var newUserDict: [String: Any] = ["Matchups": [:], "Points": 0, "NumCorrect": 0]
+    var newUserDict: [String: Any] = ["Matchups": [[:]], "Points": [], "NumCorrect": [], "TotalPoints": 0, "TotalCorrect": 0]
     let ref = Database.database().reference()
 
     @IBOutlet weak var usernameField: UITextField!

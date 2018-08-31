@@ -35,6 +35,7 @@
 		D06206131FCDD63200D82FA4 /* footballImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D06206121FCDD63200D82FA4 /* footballImage.jpg */; };
 		D06206151FCDD6A700D82FA4 /* welcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06206141FCDD6A700D82FA4 /* welcomePageViewController.swift */; };
 		D06206171FCDD9F000D82FA4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06206161FCDD9F000D82FA4 /* RegistrationViewController.swift */; };
+		D067ED582117D25D00557F19 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067ED572117D25D00557F19 /* Week.swift */; };
 		D0A4DA2C1FCB4ED70037D930 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4DA2B1FCB4ED70037D930 /* SignInViewController.swift */; };
 		D0C25EC81FC4CE9300DB03CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C25EC71FC4CE9300DB03CD /* AppDelegate.swift */; };
 		D0C25ECD1FC4CE9300DB03CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C25ECB1FC4CE9300DB03CD /* Main.storyboard */; };
@@ -96,6 +97,7 @@
 		D06206121FCDD63200D82FA4 /* footballImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = footballImage.jpg; sourceTree = "<group>"; };
 		D06206141FCDD6A700D82FA4 /* welcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomePageViewController.swift; sourceTree = "<group>"; };
 		D06206161FCDD9F000D82FA4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		D067ED572117D25D00557F19 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
 		D0A4DA2B1FCB4ED70037D930 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D0C25EC41FC4CE9300DB03CD /* FootballPickEmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballPickEmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C25EC71FC4CE9300DB03CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				D0171E6F1FDC7CD800DBF275 /* ChangePasswordViewController.swift */,
 				D0171E711FDC7D3800DBF275 /* SettingsViewController.swift */,
 				D03A01A91FDF0EBC00B0DEBB /* Music.swift */,
+				D067ED572117D25D00557F19 /* Week.swift */,
 			);
 			path = FootballPickEmApp;
 			sourceTree = "<group>";
@@ -561,6 +564,7 @@
 			files = (
 				D0171E5E1FD63ECC00DBF275 /* Team.swift in Sources */,
 				D0171E5A1FD63D1300DBF275 /* PickCell.swift in Sources */,
+				D067ED582117D25D00557F19 /* Week.swift in Sources */,
 				D0171E681FD9C90200DBF275 /* StandingCell.swift in Sources */,
 				D0171E561FD4AFD100DBF275 /* GroupViewController.swift in Sources */,
 				D06206171FCDD9F000D82FA4 /* RegistrationViewController.swift in Sources */,
@@ -662,7 +666,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: reagonite84@gmail.com (RWE27QAVY5)";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -686,6 +690,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -721,7 +726,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: reagonite84@gmail.com (RWE27QAVY5)";
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -738,6 +743,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -749,9 +756,12 @@
 			baseConfigurationReference = DE5736D4E70BE6A1BCE47558 /* Pods-FootballPickEmApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FootballPickEmApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "Justin-Kalan.FootballPickEmApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -764,9 +774,12 @@
 			baseConfigurationReference = 4C4597345EA711EC804D1E0E /* Pods-FootballPickEmApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = FootballPickEmApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "Justin-Kalan.FootballPickEmApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

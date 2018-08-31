@@ -21,6 +21,7 @@ class WelcomePageViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
+    
     // load table view from Firebase and display matchups
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,18 +29,21 @@ class WelcomePageViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         // load from Firebase
-        refHandle = ref.child("Matchups").observe(DataEventType.value){
+        
+        refHandle = ref.child("matchups").child(Week.sharedWeek.wkString).observe(DataEventType.value){
             (snapshot) in
-            let matchupArray = snapshot.value as! [String: [String: Any]]
-            for (key, value) in matchupArray {
+            print(snapshot)
+            let matchupArray = snapshot.value as? [String: [String: Any]] ?? [:]
+            for (_, value) in matchupArray {
                 let t1 = value["Team1"] as? [String: Any] ?? [:]
                 let t2 = value["Team2"] as? [String: Any] ?? [:]
                 let team1 = Team(dictionary: t1)
                 let team2 = Team(dictionary: t2)
+                //TODO get rid of date
                 let date = value["Date"] as? String ?? ""
-                let matchup = Matchup(t1: team1, t2: team2, dt: date)
+                let matchup = Matchup(t1: team1, t2: team2, dt: date, wk: Week.sharedWeek.wk)
                 self.matchups.append(matchup)
-                User.shared.matchups.append(matchup)
+                User.shared.matchups[Week.sharedWeek.wk].append(matchup)
                 self.sortMatchupsByDate() // earliest first
                // print(matchup.team1?.conference)
             }
@@ -66,7 +70,7 @@ class WelcomePageViewController: UIViewController {
     }
     // Display in chronological order, earliest matchups first
     func sortMatchupsByDate(){
-        for i in 0..<matchups.count {
+        for _ in 0..<matchups.count {
             for j in 0..<matchups.count-1 {
                 if matchups[j].dateValue > matchups[j+1].dateValue {
                     let first = matchups[j]

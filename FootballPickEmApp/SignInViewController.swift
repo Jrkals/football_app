@@ -22,6 +22,7 @@ class SignInViewController: UIViewController {
     
     // fills out default values and lets user tap to dismiss keyboard
     override func viewDidLoad() {
+        print(Week.sharedWeek.wkString) // building it now so that by the next VC it has a value
         usernameField.text = UserDefaults.standard.string(forKey: "username")
         passwordField.text = UserDefaults.standard.string(forKey: "password")
         recognizer = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.handleTap))

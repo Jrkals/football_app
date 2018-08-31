@@ -18,45 +18,48 @@ class User {
     var id: String? = ""
     
     var name: String?
-    var points: Int = 0
-    var numCorrect: Int = 0
-    var matchups: [Matchup] = []
+    var points: [Int] = [] // one entry per week
+    var numCorrect: [Int] = [] // one entry per week
+    // week[0] is useless, start week[1] as blank
+    //TODO initialize 15 weeks of blank arrays
+    var matchups: [[Matchup]] = [[], [], [], [], [], [], [], [], [],
+                                 [], [], [], [], [], [], [], [], []] // 2d array of matchups, one array per week
+    
+    var totalPoints: Int
+    var totalCorrect: Int
     
     init(nm: String?, pts: Int, nc: Int) {
         name = nm
-        points = pts
-        numCorrect = nc
+        points.append(0)
+        numCorrect.append(0)
+        totalPoints = 0
+        totalCorrect = 0
     }
     
     // compare picks vs results and add or subtract points accordingly
-    func calculateCurrentPoints(){
-        refHandle = ref.child("users").child((Auth.auth().currentUser?.uid)!).child("Matchups").observe(DataEventType.value){
+    func calculateCurrentPoints(user: User?, weekStr: String){
+        refHandle = ref.child("users").child((user?.id)!).child("Matchups").child(weekStr).observe(DataEventType.value){
             (snapshot) in
             // User's picks
             let value = snapshot.value as? [String: [String:Any]] ?? [:]
-            for(key, value) in value {
-                self.refHandle2 = self.ref.child("Matchups").observe(DataEventType.value){
-                    (snapshot) in
-                    // Acual Results
-                    let matchups = snapshot.value as? [String: [String:Any]] ?? [:]
-                    for(key2, value2) in matchups{
-                        if value2["Winner"] as? String ?? "" == value["Team"] as? String ?? "No Team" {
-                            self.points += value["Points"] as? Int ?? 0
-                        }
-                        else {
-                            let v2 = value2["Winner"] as? String ?? ""
-                            if v2.count > 0{
-                                self.points -= value["Points"] as? Int ?? 0
-                            }
-                        }
-                    }
-                    
+            for(_, value) in value {
+                if value["Result"] as? String ?? "" == value["Team"] as? String ?? "No Team" {
+                    self.totalPoints += value["Points"] as? Int ?? 0
+                    self.totalCorrect += 1
+                    print("numcorrect is \(self.totalCorrect)")
                 }
-            }
-            
-            
-        }
-        
-    }
+                else {
+                    let v2 = value["Result"] as? String ?? ""
+                    if v2.count > 0{
+                        self.totalPoints -= value["Points"] as? Int ?? 0
+                    }
+                }
+            } // end for
+        } // end ref handle
+        print("Points and num correct:")
+        print(totalPoints)
+        print(totalCorrect)
+    } // end calculate Current points
+
     
 }

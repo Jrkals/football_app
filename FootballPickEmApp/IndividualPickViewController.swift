@@ -36,6 +36,10 @@ class IndividualPickViewController: UIViewController {
     
     @IBOutlet weak var confidencePointsField: UITextField!
     
+    @IBOutlet weak var team1RankLabel: UILabel!
+    
+    @IBOutlet weak var team2RankLabel: UILabel!
+    
     var recognizer: UITapGestureRecognizer?
     
     override func viewDidLoad() {
@@ -54,6 +58,12 @@ class IndividualPickViewController: UIViewController {
         
         team1ConferenceLabel.text = matchup?.team1?.conference
         team2ConferenceLabel.text = matchup?.team2?.conference
+        
+        let team1RankLabelPoundSign: String = "#"
+        let team2RankLabelPoundSign: String = "#"
+        
+        team1RankLabel.text = team1RankLabelPoundSign + matchup!.team1!.ranking
+        team2RankLabel.text = team2RankLabelPoundSign + matchup!.team2!.ranking
         dateLabel.text = matchup?.date
         
         // fetch two team logos
@@ -81,7 +91,7 @@ class IndividualPickViewController: UIViewController {
     }
     // upload pick to database
     func makePick(teamName: String){
-        self.ref.child("users").child(User.shared.id!).child("Matchups").child((matchup?.name)!).child("Team").setValue(teamName)
+        self.ref.child("users").child(User.shared.id!).child("Matchups").child(Week.sharedWeek.wkString).child((matchup?.name)!).child("Team").setValue(teamName)
     }
     
     @IBAction func backButtonTapped(_ sender: Any) {
@@ -90,7 +100,7 @@ class IndividualPickViewController: UIViewController {
     
     //make pick if valid, then go back
     @IBAction func submitButtonTapped(_ sender: Any) {
-        self.ref.child("users").child(User.shared.id!).child("Matchups").child((matchup?.name)!).child("Points").setValue(Int(confidencePointsField.text!))
+        self.ref.child("users").child(User.shared.id!).child("Matchups").child(Week.sharedWeek.wkString).child((matchup?.name)!).child("Points").setValue(Int(confidencePointsField.text!))
         guard let cpNum = Int(confidencePointsField.text!) else {return}
         if(cpNum < 11 && cpNum > 0){
             dismiss(animated: true, completion: nil)

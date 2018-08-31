@@ -15,19 +15,30 @@ class StandingsViewController: UIViewController {
     var UserList: [User] = []
     @IBOutlet weak var tableView: UITableView!
     var ref = Database.database().reference()
+    
+    
     // load list of users, calculate their points
     override func viewDidLoad() {
+        fetchThisWeeksResults()
         super.viewDidLoad()
         tableView.dataSource = self
         self.ref.child("users").observe(DataEventType.value){
             (snapshot) in
             let userList = snapshot.value as? [String: [String:Any]] ?? [:]
+           // print(userList)
             for (key, value) in userList{
-                let newUser = User(nm: value["Name"] as? String ?? "NoName", pts: value["Points"] as? Int ?? -10000, nc: value["NumCorrect"] as? Int ?? -10)
+           //     print("fetche users")
+                let newUser = User(nm: value["Name"] as? String ?? "NoName", pts: value["Points"] as? Int ?? -10000, nc: value["NumCorrect"] as? Int ?? 0)
                 newUser.id = key
-                newUser.calculateCurrentPoints()
+                // sum points over all weeks up to present
+                for i in 0...Week.sharedWeek.wk {
+                    var weekStr: String = "week"
+                    weekStr += String(i)
+                    newUser.calculateCurrentPoints(user: newUser, weekStr: weekStr) // pass in week
+                }
                 self.UserList.append(newUser)
                 
+               // print(value["NumCorrect"])
             }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
@@ -50,9 +61,9 @@ class StandingsViewController: UIViewController {
     
     // simple bubble sort of list by num correct
     func sortUserListByNumCorrect(){
-        for i in 0..<UserList.count{
+        for _ in 0..<UserList.count{
             for j in 0..<UserList.count-1{
-                if(UserList[j].numCorrect < UserList[j+1].numCorrect){
+                if(UserList[j].totalCorrect < UserList[j+1].totalCorrect){
                     let first = UserList[j]
                     let second = UserList[j+1]
                     UserList[j] = second
@@ -64,14 +75,58 @@ class StandingsViewController: UIViewController {
     
     // simple bubble sort of list by Points
     func sortUserListByPoints(){
-        for i in 0..<UserList.count{
+        for _ in 0..<UserList.count{
             for j in 0..<UserList.count-1{
-                if(UserList[j].points < UserList[j+1].points){
+                if(UserList[j].totalPoints < UserList[j+1].totalPoints){
                     let first = UserList[j]
                     let second = UserList[j+1]
                     UserList[j] = second
                     UserList[j+1] = first
                 }
+            }
+        }
+    }
+    //TODO fix name of matchup in DB
+    //Fetch this weeks results from matchups and write the result to users..matchups
+    func fetchThisWeeksResults() {
+        var winner: String?
+        var matchupName: String?
+        self.ref.child("matchups").child(Week.sharedWeek.wkString).observe(DataEventType.value){
+        (snapshot) in
+            let matchList = snapshot.value as! [String: [String:Any]] //?? [:]
+            for (_, value) in matchList{
+               // print("fetched \(matchList.count) matches")
+                // fetch winner
+                winner = value["Result"] as? String ?? "No winner"
+                print(winner)
+                let t1 = value["Team1"] as? [String: Any] ?? [:]
+                let t2 = value["Team2"] as? [String: Any] ?? [:]
+                let team1 = Team(dictionary: t1)
+                let team2 = Team(dictionary: t2)
+                let mname = team1.name! + team2.name!
+                matchupName = mname
+                // if game played and recorded (there is a winner)
+                if winner != "No winner" {
+                    self.writeResults(winner: winner, name: matchupName)
+                    print("called writeResults")
+                }
+            }
+            
+        }
+    } // end fetch results
+    
+    func writeResults(winner: String?, name: String?) {
+        if(winner == "No winner"){
+            print("winner is no winner")
+        }
+        //write winner to users matchups
+        self.ref.child("users").observe(DataEventType.value){
+            (snapshot) in
+            let userList = snapshot.value as! [String: [String:Any]] //?? [:]
+            for (key, _) in userList{
+                let ref3 = Database.database().reference() // new ref for new call
+                //write the winner to user/matchups
+                ref3.child("users").child(key).child("Matchups").child(Week.sharedWeek.wkString).child(name!).child("Result").setValue(winner)
             }
         }
     }
@@ -88,7 +143,7 @@ extension StandingsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "StandingCell") as! StandingCell
-        cell.configure(nm: UserList[indexPath.item].name!, pts: UserList[indexPath.item].points, nc: UserList[indexPath.item].numCorrect)
+        cell.configure(nm: UserList[indexPath.item].name!, pts: UserList[indexPath.item].totalPoints, nc: UserList[indexPath.item].totalCorrect)
         return cell
     }
     

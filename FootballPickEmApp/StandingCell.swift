@@ -24,7 +24,7 @@ class StandingCell: UITableViewCell {
         points = pts
         numCorrect = nc
         emailLabel.text = name
-        pointsLabel.text = String(describing: numCorrect)
-        numCorrectLabel.text = String(describing: points)
+        pointsLabel.text = String(describing: points)
+        numCorrectLabel.text = String(describing: numCorrect)
     }
 }
