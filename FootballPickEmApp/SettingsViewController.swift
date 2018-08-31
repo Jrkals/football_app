@@ -12,7 +12,7 @@ import AVFoundation
 
 class SettingsViewController: UIViewController {
     // song options
-    var pickerOptions: [String] = ["bcs_theme_audio", "cbsSports", "shipping up to boston", "drumABC", "playoff", "oldABCsports"]
+    var pickerOptions: [String] = []//  ["bcs_theme_audio", "cbsSports", "shipping up to boston", "drumABC", "playoff", "oldABCsports"]
         
     @IBOutlet weak var musicPicker: UIPickerView!
     

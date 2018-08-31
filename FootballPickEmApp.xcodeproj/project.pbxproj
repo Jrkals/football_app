@@ -24,14 +24,8 @@
 		D0171E6E1FDC7CCD00DBF275 /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0171E6D1FDC7CCD00DBF275 /* DeleteAccountViewController.swift */; };
 		D0171E701FDC7CD800DBF275 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0171E6F1FDC7CD800DBF275 /* ChangePasswordViewController.swift */; };
 		D0171E721FDC7D3800DBF275 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0171E711FDC7D3800DBF275 /* SettingsViewController.swift */; };
-		D0171E741FDEF74800DBF275 /* cbsSports.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D0171E731FDEF74800DBF275 /* cbsSports.mp3 */; };
-		D0171E761FDEF74E00DBF275 /* oldABCsports.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D0171E751FDEF74E00DBF275 /* oldABCsports.mp3 */; };
-		D0171E781FDEF75200DBF275 /* shipping up to boston.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D0171E771FDEF75200DBF275 /* shipping up to boston.mp3 */; };
-		D0171E7A1FDEF75500DBF275 /* drumABC.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D0171E791FDEF75500DBF275 /* drumABC.mp3 */; };
-		D0171E7C1FDEF75900DBF275 /* playoff.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D0171E7B1FDEF75900DBF275 /* playoff.mp3 */; };
 		D03A01AA1FDF0EBC00B0DEBB /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03A01A91FDF0EBC00B0DEBB /* Music.swift */; };
 		D062060F1FCDD2DE00D82FA4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D062060E1FCDD2DE00D82FA4 /* AVFoundation.framework */; };
-		D06206111FCDD52A00D82FA4 /* bcs_theme_audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D06206101FCDD52900D82FA4 /* bcs_theme_audio.mp3 */; };
 		D06206131FCDD63200D82FA4 /* footballImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D06206121FCDD63200D82FA4 /* footballImage.jpg */; };
 		D06206151FCDD6A700D82FA4 /* welcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06206141FCDD6A700D82FA4 /* welcomePageViewController.swift */; };
 		D06206171FCDD9F000D82FA4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06206161FCDD9F000D82FA4 /* RegistrationViewController.swift */; };
@@ -86,14 +80,8 @@
 		D0171E6D1FDC7CCD00DBF275 /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
 		D0171E6F1FDC7CD800DBF275 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		D0171E711FDC7D3800DBF275 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		D0171E731FDEF74800DBF275 /* cbsSports.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cbsSports.mp3; sourceTree = "<group>"; };
-		D0171E751FDEF74E00DBF275 /* oldABCsports.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = oldABCsports.mp3; sourceTree = "<group>"; };
-		D0171E771FDEF75200DBF275 /* shipping up to boston.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "shipping up to boston.mp3"; sourceTree = "<group>"; };
-		D0171E791FDEF75500DBF275 /* drumABC.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drumABC.mp3; sourceTree = "<group>"; };
-		D0171E7B1FDEF75900DBF275 /* playoff.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playoff.mp3; sourceTree = "<group>"; };
 		D03A01A91FDF0EBC00B0DEBB /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		D062060E1FCDD2DE00D82FA4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		D06206101FCDD52900D82FA4 /* bcs_theme_audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bcs_theme_audio.mp3; sourceTree = "<group>"; };
 		D06206121FCDD63200D82FA4 /* footballImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = footballImage.jpg; sourceTree = "<group>"; };
 		D06206141FCDD6A700D82FA4 /* welcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomePageViewController.swift; sourceTree = "<group>"; };
 		D06206161FCDD9F000D82FA4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -186,12 +174,6 @@
 			children = (
 				D0C25EC71FC4CE9300DB03CD /* AppDelegate.swift */,
 				D0C25ECB1FC4CE9300DB03CD /* Main.storyboard */,
-				D06206101FCDD52900D82FA4 /* bcs_theme_audio.mp3 */,
-				D0171E731FDEF74800DBF275 /* cbsSports.mp3 */,
-				D0171E751FDEF74E00DBF275 /* oldABCsports.mp3 */,
-				D0171E771FDEF75200DBF275 /* shipping up to boston.mp3 */,
-				D0171E791FDEF75500DBF275 /* drumABC.mp3 */,
-				D0171E7B1FDEF75900DBF275 /* playoff.mp3 */,
 				D0C25ECE1FC4CE9300DB03CD /* Assets.xcassets */,
 				D06206121FCDD63200D82FA4 /* footballImage.jpg */,
 				D0C25ED01FC4CE9300DB03CD /* LaunchScreen.storyboard */,
@@ -327,7 +309,7 @@
 				TargetAttributes = {
 					D0C25EC31FC4CE9300DB03CD = {
 						CreatedOnToolsVersion = 9.1;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 					D0C25ED71FC4CE9300DB03CD = {
 						CreatedOnToolsVersion = 9.1;
@@ -367,15 +349,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D06206131FCDD63200D82FA4 /* footballImage.jpg in Resources */,
-				D0171E741FDEF74800DBF275 /* cbsSports.mp3 in Resources */,
-				D06206111FCDD52A00D82FA4 /* bcs_theme_audio.mp3 in Resources */,
-				D0171E781FDEF75200DBF275 /* shipping up to boston.mp3 in Resources */,
 				D0C25ED21FC4CE9300DB03CD /* LaunchScreen.storyboard in Resources */,
-				D0171E7C1FDEF75900DBF275 /* playoff.mp3 in Resources */,
-				D0171E7A1FDEF75500DBF275 /* drumABC.mp3 in Resources */,
 				D0C25EF61FC4CED900DB03CD /* GoogleService-Info.plist in Resources */,
 				D0C25ECF1FC4CE9300DB03CD /* Assets.xcassets in Resources */,
-				D0171E761FDEF74E00DBF275 /* oldABCsports.mp3 in Resources */,
 				D0C25ECD1FC4CE9300DB03CD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -666,8 +642,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: reagonite84@gmail.com (RWE27QAVY5)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Justin Kalan (DC2WLJFSF8)";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = DC2WLJFSF8;
@@ -690,7 +666,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "207fce2c-059c-4c3e-8d7b-e460e1ec2f56";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -726,8 +702,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: reagonite84@gmail.com (RWE27QAVY5)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Justin Kalan (DC2WLJFSF8)";
+				CODE_SIGN_STYLE = Manual;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = DC2WLJFSF8;
@@ -744,7 +720,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "207fce2c-059c-4c3e-8d7b-e460e1ec2f56";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
@@ -757,13 +733,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = DC2WLJFSF8;
 				INFOPLIST_FILE = FootballPickEmApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "Justin-Kalan.FootballPickEmApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "207fce2c-059c-4c3e-8d7b-e460e1ec2f56";
+				PROVISIONING_PROFILE_SPECIFIER = com.justin.kalan;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -775,13 +754,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = DC2WLJFSF8;
 				INFOPLIST_FILE = FootballPickEmApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "Justin-Kalan.FootballPickEmApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "207fce2c-059c-4c3e-8d7b-e460e1ec2f56";
+				PROVISIONING_PROFILE_SPECIFIER = com.justin.kalan;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -863,7 +845,7 @@
 				D0C25EEB1FC4CE9300DB03CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		D0C25EEC1FC4CE9300DB03CD /* Build configuration list for PBXNativeTarget "FootballPickEmApp" */ = {
 			isa = XCConfigurationList;
@@ -872,7 +854,7 @@
 				D0C25EEE1FC4CE9300DB03CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		D0C25EEF1FC4CE9300DB03CD /* Build configuration list for PBXNativeTarget "FootballPickEmAppTests" */ = {
 			isa = XCConfigurationList;
@@ -881,7 +863,7 @@
 				D0C25EF11FC4CE9300DB03CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		D0C25EF21FC4CE9300DB03CD /* Build configuration list for PBXNativeTarget "FootballPickEmAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -890,7 +872,7 @@
 				D0C25EF41FC4CE9300DB03CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

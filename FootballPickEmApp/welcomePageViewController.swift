@@ -56,7 +56,7 @@ class WelcomePageViewController: UIViewController {
         
         self.tableView.reloadData()
         
-        //play music
+        /*play music
         let bcsSong = Bundle.main.path(forResource: "bcs_theme_audio", ofType: ".mp3")
         do{
             if let bcsSong = bcsSong{
@@ -66,7 +66,7 @@ class WelcomePageViewController: UIViewController {
         }
         catch {
             print(error)
-        }
+        }*/
     }
     // Display in chronological order, earliest matchups first
     func sortMatchupsByDate(){

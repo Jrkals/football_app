@@ -93,7 +93,7 @@ class StandingsViewController: UIViewController {
         var matchupName: String?
         self.ref.child("matchups").child(Week.sharedWeek.wkString).observe(DataEventType.value){
         (snapshot) in
-            let matchList = snapshot.value as! [String: [String:Any]] //?? [:]
+            let matchList = snapshot.value as? [String: [String:Any]] ?? [:]
             for (_, value) in matchList{
                // print("fetched \(matchList.count) matches")
                 // fetch winner
