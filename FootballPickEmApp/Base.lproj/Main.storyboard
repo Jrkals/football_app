@@ -19,66 +19,74 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="04M-5O-fje">
-                                <rect key="frame" x="100" y="230" width="175" height="30"/>
+                                <rect key="frame" x="100" y="283" width="175" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ECo-EQ-N5g">
-                                <rect key="frame" x="100" y="335" width="175" height="30"/>
+                                <rect key="frame" x="100" y="363" width="175" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAG-Ax-6hq">
-                                <rect key="frame" x="150" y="446" width="75" height="30"/>
+                                <rect key="frame" x="150" y="497" width="75" height="30"/>
                                 <state key="normal" title="Sign In"/>
                                 <connections>
                                     <action selector="signInButtonTapped:" destination="IXk-yo-Eob" eventType="touchUpInside" id="RKp-ZY-fHH"/>
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error: Try Again" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk2-79-v8I">
-                                <rect key="frame" x="128" y="135" width="118" height="21"/>
+                                <rect key="frame" x="128" y="212" width="118" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CN5-De-tDP">
-                                <rect key="frame" x="159" y="523" width="57" height="30"/>
+                                <rect key="frame" x="159" y="567" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="registerButtonTapped:" destination="IXk-yo-Eob" eventType="touchUpInside" id="s6H-N3-LIO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zt-Z4-0iQ">
-                                <rect key="frame" x="138.5" y="49" width="97" height="30"/>
+                                <rect key="frame" x="138.5" y="126" width="97" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lWv-Lx-hJ6">
+                                <rect key="frame" x="96.5" y="427" width="182" height="30"/>
+                                <state key="normal" title="Sign in without an account"/>
+                                <connections>
+                                    <action selector="signInWithoutAccountTapped:" destination="IXk-yo-Eob" eventType="touchUpInside" id="LYd-8A-wE8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0i0-lN-vG8" firstAttribute="trailing" secondItem="CN5-De-tDP" secondAttribute="trailing" constant="159" id="07G-qe-HOY"/>
-                            <constraint firstItem="0i0-lN-vG8" firstAttribute="bottom" secondItem="CN5-De-tDP" secondAttribute="bottom" constant="114" id="33k-q0-oho"/>
+                            <constraint firstItem="0i0-lN-vG8" firstAttribute="bottom" secondItem="CN5-De-tDP" secondAttribute="bottom" constant="70" id="33k-q0-oho"/>
                             <constraint firstItem="Dk2-79-v8I" firstAttribute="top" secondItem="9zt-Z4-0iQ" secondAttribute="bottom" constant="56" id="3nY-xx-b6T"/>
-                            <constraint firstItem="ECo-EQ-N5g" firstAttribute="top" secondItem="04M-5O-fje" secondAttribute="bottom" constant="75" id="7Zx-Nv-Zz7"/>
+                            <constraint firstItem="ECo-EQ-N5g" firstAttribute="top" secondItem="04M-5O-fje" secondAttribute="bottom" constant="50" id="7Zx-Nv-Zz7"/>
                             <constraint firstItem="0i0-lN-vG8" firstAttribute="trailing" secondItem="bAG-Ax-6hq" secondAttribute="trailing" constant="150" id="AeZ-5A-C5t"/>
                             <constraint firstItem="CN5-De-tDP" firstAttribute="leading" secondItem="0i0-lN-vG8" secondAttribute="leading" constant="159" id="DqM-72-KkJ"/>
+                            <constraint firstItem="bAG-Ax-6hq" firstAttribute="top" secondItem="lWv-Lx-hJ6" secondAttribute="bottom" constant="40" id="EIB-Hs-S8t"/>
                             <constraint firstItem="ECo-EQ-N5g" firstAttribute="leading" secondItem="0i0-lN-vG8" secondAttribute="leading" constant="100" id="O29-kz-8qv"/>
                             <constraint firstItem="0i0-lN-vG8" firstAttribute="trailing" secondItem="ECo-EQ-N5g" secondAttribute="trailing" constant="100" id="TPO-VG-P0T"/>
                             <constraint firstItem="04M-5O-fje" firstAttribute="leading" secondItem="0i0-lN-vG8" secondAttribute="leading" constant="100" id="V9z-qZ-Cit"/>
                             <constraint firstItem="bAG-Ax-6hq" firstAttribute="leading" secondItem="0i0-lN-vG8" secondAttribute="leading" constant="150" id="VC9-5Z-dQF"/>
-                            <constraint firstItem="CN5-De-tDP" firstAttribute="top" secondItem="bAG-Ax-6hq" secondAttribute="bottom" constant="47" id="YDd-QY-LHQ"/>
-                            <constraint firstItem="04M-5O-fje" firstAttribute="top" secondItem="Dk2-79-v8I" secondAttribute="bottom" constant="74" id="b6o-5p-wH1"/>
-                            <constraint firstItem="bAG-Ax-6hq" firstAttribute="top" secondItem="ECo-EQ-N5g" secondAttribute="bottom" constant="81" id="bn3-qH-IfN"/>
+                            <constraint firstItem="lWv-Lx-hJ6" firstAttribute="top" secondItem="ECo-EQ-N5g" secondAttribute="bottom" constant="34" id="XaO-rs-tvD"/>
+                            <constraint firstItem="CN5-De-tDP" firstAttribute="top" secondItem="bAG-Ax-6hq" secondAttribute="bottom" constant="40" id="YDd-QY-LHQ"/>
+                            <constraint firstItem="04M-5O-fje" firstAttribute="top" secondItem="Dk2-79-v8I" secondAttribute="bottom" constant="50" id="b6o-5p-wH1"/>
                             <constraint firstItem="9zt-Z4-0iQ" firstAttribute="centerX" secondItem="Dk2-79-v8I" secondAttribute="centerX" id="hgx-d3-l5f"/>
                             <constraint firstItem="0i0-lN-vG8" firstAttribute="trailing" secondItem="04M-5O-fje" secondAttribute="trailing" constant="100" id="i7J-mj-vvp"/>
                             <constraint firstItem="Dk2-79-v8I" firstAttribute="leading" secondItem="0i0-lN-vG8" secondAttribute="leading" constant="128" id="mvC-gb-ccR"/>
-                            <constraint firstItem="0i0-lN-vG8" firstAttribute="bottom" secondItem="bAG-Ax-6hq" secondAttribute="bottom" constant="191" id="qfo-PY-gMH"/>
                             <constraint firstItem="0i0-lN-vG8" firstAttribute="trailing" secondItem="Dk2-79-v8I" secondAttribute="trailing" constant="129" id="sVy-Ku-xVm"/>
+                            <constraint firstItem="lWv-Lx-hJ6" firstAttribute="centerX" secondItem="0i0-lN-vG8" secondAttribute="centerX" id="yRm-Ke-i7N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0i0-lN-vG8"/>
                     </view>

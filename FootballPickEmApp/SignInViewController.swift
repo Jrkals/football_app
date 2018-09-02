@@ -58,5 +58,24 @@ class SignInViewController: UIViewController {
     @IBAction func registerButtonTapped(_ sender: Any) {
         self.performSegue(withIdentifier: "toRegistration", sender: self)
     }
-    
+    // For those without an account
+    //Required to fit Apple privacy requirements
+    @IBAction func signInWithoutAccountTapped(_ sender: Any) {
+        Auth.auth().signIn(withEmail: "genericemail@email.com", password: "genericPassword"){
+            (user, error) in
+            if let error = error {
+                self.errorLabel.isHidden = false
+                print("Error \(error)")
+                return
+            }
+            if user != nil { // have valid user
+                self.errorLabel.isHidden = true
+                User.shared.id = user?.uid // set global id on app for database purposes
+                User.shared.name = user?.email
+                print(user?.email)
+                
+                self.performSegue(withIdentifier: "ToNext", sender: self)
+            }
+        }
+    }
 }
