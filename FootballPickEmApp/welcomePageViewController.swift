@@ -82,15 +82,6 @@ class WelcomePageViewController: UIViewController {
         }
     }
     
-    @IBAction func stopMusicButtonTapped(_ sender: Any) {
-        Music.shared.musicPlayer.stop()
-    }
-    
-    @IBAction func playMusicButtonTapped(_ sender: Any) {
-        Music.shared.musicPlayer.play()
-    }
-    
-    
 }
 
 extension WelcomePageViewController: UITableViewDataSource {

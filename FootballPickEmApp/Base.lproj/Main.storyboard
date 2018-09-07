@@ -196,39 +196,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wab-rU-XWv">
-                                <rect key="frame" x="20" y="139" width="335" height="188"/>
+                                <rect key="frame" x="20" y="100" width="335" height="188"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="188" id="9Pi-ia-Dhf"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9M1-NW-Mw9">
-                                <rect key="frame" x="260" y="38" width="77" height="51"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="44" id="ntT-rc-Yva"/>
-                                </constraints>
-                                <state key="normal" title="Stop Music"/>
-                                <connections>
-                                    <action selector="stopMusicButtonTapped:" destination="iHm-fX-ulj" eventType="touchUpInside" id="zTn-J9-dn7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwv-SJ-93M">
-                                <rect key="frame" x="27" y="45" width="74" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="ZZB-AG-a3H"/>
-                                </constraints>
-                                <state key="normal" title="Play Music"/>
-                                <connections>
-                                    <action selector="playMusicButtonTapped:" destination="iHm-fX-ulj" eventType="touchUpInside" id="u9f-hz-CXP"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Week's Matchups" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTj-fX-euu">
-                                <rect key="frame" x="110" y="345" width="173" height="21"/>
+                                <rect key="frame" x="110" y="313" width="173" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1vQ-88-3Ti">
-                                <rect key="frame" x="-0.5" y="417" width="375" height="161"/>
+                                <rect key="frame" x="-0.5" y="385" width="375" height="193"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PickCell" id="pCZ-AV-DUy" customClass="PickCell" customModule="FootballPickEmApp" customModuleProvider="target">
@@ -272,21 +252,14 @@
                         <constraints>
                             <constraint firstItem="EDr-Ww-r9V" firstAttribute="bottom" secondItem="1vQ-88-3Ti" secondAttribute="bottom" constant="40" id="0nd-WY-VC0"/>
                             <constraint firstItem="xTj-fX-euu" firstAttribute="leading" secondItem="EDr-Ww-r9V" secondAttribute="leading" constant="110" id="5AP-No-xk7"/>
-                            <constraint firstItem="Rwv-SJ-93M" firstAttribute="leading" secondItem="EDr-Ww-r9V" secondAttribute="leading" constant="27" id="8ia-ty-86R"/>
                             <constraint firstItem="1vQ-88-3Ti" firstAttribute="top" secondItem="xTj-fX-euu" secondAttribute="bottom" constant="51" id="BJs-1n-WR6"/>
-                            <constraint firstItem="xTj-fX-euu" firstAttribute="top" secondItem="Wab-rU-XWv" secondAttribute="bottom" constant="18" id="BVd-wG-aIH"/>
-                            <constraint firstItem="EDr-Ww-r9V" firstAttribute="trailing" secondItem="9M1-NW-Mw9" secondAttribute="trailing" constant="38" id="DWm-KC-YL1"/>
-                            <constraint firstItem="Wab-rU-XWv" firstAttribute="top" secondItem="Rwv-SJ-93M" secondAttribute="bottom" constant="50" id="FTI-Iz-6oJ"/>
+                            <constraint firstItem="xTj-fX-euu" firstAttribute="top" secondItem="Wab-rU-XWv" secondAttribute="bottom" constant="25" id="BVd-wG-aIH"/>
                             <constraint firstItem="1vQ-88-3Ti" firstAttribute="width" secondItem="WhX-ma-jSe" secondAttribute="width" id="Grw-nG-6pK"/>
-                            <constraint firstItem="Wab-rU-XWv" firstAttribute="top" secondItem="9M1-NW-Mw9" secondAttribute="bottom" constant="50" id="Hx9-7A-E4y"/>
                             <constraint firstItem="Wab-rU-XWv" firstAttribute="leading" secondItem="EDr-Ww-r9V" secondAttribute="leading" constant="20" id="JfS-Ve-XC1"/>
-                            <constraint firstItem="9M1-NW-Mw9" firstAttribute="leading" secondItem="Rwv-SJ-93M" secondAttribute="trailing" constant="159" id="MSd-fQ-jfr"/>
-                            <constraint firstItem="9M1-NW-Mw9" firstAttribute="leading" secondItem="EDr-Ww-r9V" secondAttribute="leading" constant="260" id="NF5-9p-skA"/>
+                            <constraint firstItem="Wab-rU-XWv" firstAttribute="top" secondItem="EDr-Ww-r9V" secondAttribute="top" constant="80" id="P4k-hN-BM8"/>
                             <constraint firstItem="EDr-Ww-r9V" firstAttribute="trailing" secondItem="xTj-fX-euu" secondAttribute="trailing" constant="92" id="TJU-MR-LCX"/>
                             <constraint firstItem="1vQ-88-3Ti" firstAttribute="centerX" secondItem="EDr-Ww-r9V" secondAttribute="centerX" id="WEb-6b-GtF"/>
-                            <constraint firstItem="9M1-NW-Mw9" firstAttribute="top" secondItem="EDr-Ww-r9V" secondAttribute="top" constant="18" id="cQC-Sz-PJc"/>
                             <constraint firstItem="EDr-Ww-r9V" firstAttribute="trailing" secondItem="Wab-rU-XWv" secondAttribute="trailing" constant="20" id="odM-Ef-7hG"/>
-                            <constraint firstItem="Rwv-SJ-93M" firstAttribute="top" secondItem="EDr-Ww-r9V" secondAttribute="top" constant="25" id="ofy-Pr-xf1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EDr-Ww-r9V"/>
                     </view>

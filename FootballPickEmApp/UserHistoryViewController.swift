@@ -13,7 +13,7 @@ class UserHistoryViewController: UIViewController {
     var ref = Database.database().reference()
     var refHandle: DatabaseHandle?
     var user: User?
-    var matchupList: [[Matchup]] = [[], []]
+    var matchupList: [[Matchup]] = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
     var weekString = Week.sharedWeek.wkString
     var weekInt = Week.sharedWeek.wk
     
@@ -31,7 +31,7 @@ class UserHistoryViewController: UIViewController {
     // load matchups and put into matchupList
     // the specific data about that matchup is fetched in HistoryCell
     override func viewDidLoad() {
-        matchupList = [[], []] // reset to emtpy when reloading. Fixes problem with reduplicating games
+        matchupList = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], []] // reset to emtpy when reloading. Fixes problem with reduplicating games
         super.viewDidLoad()
         weekPicker.delegate = self
         weekPicker.dataSource = self
@@ -44,6 +44,7 @@ class UserHistoryViewController: UIViewController {
             let matchups = snapshot.value as? [String: [String:Any]] ?? [:]
             print("MATCHUPS****************************")
             print(matchups)
+            print("num matchups is\(self.matchupList.count)")
             for(key, value) in matchups {
               //  print("matchups found")
                 // make fake matchup- only need to change the matchup name

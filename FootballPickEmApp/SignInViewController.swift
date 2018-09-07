@@ -31,6 +31,7 @@ class SignInViewController: UIViewController {
     
     @objc func handleTap(){
         passwordField.resignFirstResponder()
+        usernameField.resignFirstResponder()
     }
     
     @IBAction func signInButtonTapped(_ sender: Any) {

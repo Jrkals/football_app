@@ -51,6 +51,9 @@ class RegistrationViewController: UIViewController {
                     User.shared.name = user?.email
                     print("success, created new user")
                     print (user?.email)
+                    UserDefaults.standard.set(self.usernameField.text!, forKey: "username")
+                    UserDefaults.standard.set(self.passwordField.text!, forKey: "password")
+                    UserDefaults.standard.synchronize()
                     self.performSegue(withIdentifier: "toMain", sender: self)
                 }
             }
