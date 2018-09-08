@@ -488,7 +488,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jkalan@udallas.edu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTN-La-4tP">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jkalan@udallas.edu" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTN-La-4tP">
                                                     <rect key="frame" x="15" y="11" width="147" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.84465640779999995" green="0.51457053419999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -501,19 +501,19 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pts:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bca-of-4f9">
-                                                    <rect key="frame" x="197" y="11" width="29" height="21"/>
+                                                    <rect key="frame" x="192" y="11" width="29" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="bca-of-4f9" firstAttribute="leading" secondItem="MTN-La-4tP" secondAttribute="trailing" constant="35" id="6f7-Mg-yzY"/>
+                                                <constraint firstItem="bca-of-4f9" firstAttribute="leading" secondItem="MTN-La-4tP" secondAttribute="trailing" priority="750" constant="30" id="CeD-Fc-z0R"/>
                                                 <constraint firstAttribute="trailing" secondItem="Yo4-nB-y3I" secondAttribute="trailing" constant="51" id="DKA-Lc-Zps"/>
                                                 <constraint firstItem="MTN-La-4tP" firstAttribute="top" secondItem="L8g-bK-Mif" secondAttribute="top" constant="11" id="EYC-qj-k5U"/>
                                                 <constraint firstItem="MTN-La-4tP" firstAttribute="leading" secondItem="L8g-bK-Mif" secondAttribute="leading" constant="15" id="TOu-JX-7dD"/>
                                                 <constraint firstItem="bca-of-4f9" firstAttribute="centerY" secondItem="MTN-La-4tP" secondAttribute="centerY" id="V8o-Kc-GOr"/>
-                                                <constraint firstItem="Yo4-nB-y3I" firstAttribute="leading" secondItem="bca-of-4f9" secondAttribute="trailing" constant="74" id="e8S-zQ-QlL"/>
+                                                <constraint firstItem="Yo4-nB-y3I" firstAttribute="leading" secondItem="bca-of-4f9" secondAttribute="trailing" priority="250" constant="50" id="e8S-zQ-QlL"/>
                                                 <constraint firstAttribute="bottom" secondItem="MTN-La-4tP" secondAttribute="bottom" constant="11.5" id="eSa-CP-xEp"/>
                                                 <constraint firstItem="Yo4-nB-y3I" firstAttribute="centerY" secondItem="bca-of-4f9" secondAttribute="centerY" id="nT6-9y-m4u"/>
                                             </constraints>

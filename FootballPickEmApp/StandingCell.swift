@@ -20,9 +20,16 @@ class StandingCell: UITableViewCell {
     @IBOutlet weak var numCorrectLabel: UILabel!
     
     func configure(nm: String, pts: Int, nc: Int){
-        name = nm
+        var name = nm
         points = pts
         numCorrect = nc
+        
+        // complicated ass way to get a substring
+        if(name.count > 10){
+            let range = name.index(nm.endIndex, offsetBy: -5)..<name.endIndex
+            name.removeSubrange(range)
+        }
+        
         emailLabel.text = name
         pointsLabel.text = String(describing: points)
         numCorrectLabel.text = String(describing: numCorrect)
