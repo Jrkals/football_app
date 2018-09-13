@@ -21,7 +21,6 @@ class WelcomePageViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     
-    
     // load table view from Firebase and display matchups
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +31,7 @@ class WelcomePageViewController: UIViewController {
         
         refHandle = ref.child("matchups").child(Week.sharedWeek.wkString).observe(DataEventType.value){
             (snapshot) in
-            print(snapshot)
+         //   print(snapshot)
             let matchupArray = snapshot.value as? [String: [String: Any]] ?? [:]
             for (_, value) in matchupArray {
                 let t1 = value["Team1"] as? [String: Any] ?? [:]
@@ -52,21 +51,7 @@ class WelcomePageViewController: UIViewController {
                 self.tableView.reloadData()
             }
         }
-        
-        
         self.tableView.reloadData()
-        
-        /*play music
-        let bcsSong = Bundle.main.path(forResource: "bcs_theme_audio", ofType: ".mp3")
-        do{
-            if let bcsSong = bcsSong{
-                try Music.shared.musicPlayer = AVAudioPlayer(contentsOf: URL(fileURLWithPath: bcsSong))
-                Music.shared.musicPlayer.play()
-            }
-        }
-        catch {
-            print(error)
-        }*/
     }
     // Display in chronological order, earliest matchups first
     func sortMatchupsByDate(){
@@ -81,7 +66,6 @@ class WelcomePageViewController: UIViewController {
             }
         }
     }
-    
 }
 
 extension WelcomePageViewController: UITableViewDataSource {
@@ -94,8 +78,6 @@ extension WelcomePageViewController: UITableViewDataSource {
         cell.configure(mtchp: matchups[indexPath.item])
         return cell
     }
-    
-    
 }
 
 // go to individual pick VC to make specific pick

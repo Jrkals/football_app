@@ -13,6 +13,16 @@ class SignInViewController: UIViewController {
     var handle: AuthStateDidChangeListenerHandle?
 
     @IBOutlet weak var usernameField: UITextField!
+    /* Actions for text fields
+    */
+    
+    @IBAction func doneEditingUsername(_ sender: Any) {
+        usernameField.resignFirstResponder()
+    }
+    
+    @IBAction func doneEditingPassword(_ sender: Any) {
+        passwordField.resignFirstResponder()
+    }
     
     @IBOutlet weak var passwordField: UITextField!
     
@@ -23,6 +33,7 @@ class SignInViewController: UIViewController {
     // fills out default values and lets user tap to dismiss keyboard
     override func viewDidLoad() {
         print(Week.sharedWeek.wkString) // building it now so that by the next VC it has a value
+        print(Week.previousWeek.wkString) // ''
         usernameField.text = UserDefaults.standard.string(forKey: "username")
         passwordField.text = UserDefaults.standard.string(forKey: "password")
         recognizer = UITapGestureRecognizer(target: self, action: #selector(SignInViewController.handleTap))
@@ -46,7 +57,7 @@ class SignInViewController: UIViewController {
                 self.errorLabel.isHidden = true
                 User.shared.id = user?.uid // set global id on app for database purposes
                 User.shared.name = user?.email
-                print(user?.email)
+                print(user?.email ?? "No email")
                 UserDefaults.standard.set(self.usernameField.text!, forKey: "username")
                 UserDefaults.standard.set(self.passwordField.text!, forKey: "password")
                 UserDefaults.standard.synchronize()
@@ -73,7 +84,7 @@ class SignInViewController: UIViewController {
                 self.errorLabel.isHidden = true
                 User.shared.id = user?.uid // set global id on app for database purposes
                 User.shared.name = user?.email
-                print(user?.email)
+                print(user?.email ?? "no email")
                 
                 self.performSegue(withIdentifier: "ToNext", sender: self)
             }

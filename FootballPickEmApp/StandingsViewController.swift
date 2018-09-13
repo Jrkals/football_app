@@ -22,30 +22,24 @@ class StandingsViewController: UIViewController {
         fetchThisWeeksResults()
         super.viewDidLoad()
         tableView.dataSource = self
+      //  tableView.delegate = self
         self.ref.child("users").observe(DataEventType.value){
             (snapshot) in
             let userList = snapshot.value as? [String: [String:Any]] ?? [:]
            // print(userList)
-            for (key, value) in userList{
-           //     print("fetche users")
+            for (_, value) in userList{
                 let newUser = User(nm: value["Name"] as? String ?? "NoName", pts: value["Points"] as? Int ?? -10000, nc: value["NumCorrect"] as? Int ?? 0)
-                newUser.id = key
-                // sum points over all weeks up to present
-                for i in 0...Week.sharedWeek.wk {
-                    var weekStr: String = "week"
-                    weekStr += String(i)
-                    newUser.calculateCurrentPoints(user: newUser, weekStr: weekStr) // pass in week
-                }
                 self.UserList.append(newUser)
-                
-               // print(value["NumCorrect"])
             }
             DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
+        // Calculate one's own points for this week having read your total up to this point
+        User.shared.calculateCurrentPoints(weekStr: Week.previousWeek.wkString)
         
        // self.tableView.reloadData()
+        
         print(UserList)
     }
     
@@ -87,18 +81,18 @@ class StandingsViewController: UIViewController {
         }
     }
     //TODO fix name of matchup in DB
-    //Fetch this weeks results from matchups and write the result to users..matchups
+    //Fetch this weeks results from matchups and write the result to users...matchups
     func fetchThisWeeksResults() {
         var winner: String?
         var matchupName: String?
-        self.ref.child("matchups").child(Week.sharedWeek.wkString).observe(DataEventType.value){
+        self.ref.child("matchups").child(Week.previousWeek.wkString).observe(DataEventType.value){
         (snapshot) in
             let matchList = snapshot.value as? [String: [String:Any]] ?? [:]
             for (_, value) in matchList{
                // print("fetched \(matchList.count) matches")
                 // fetch winner
                 winner = value["Result"] as? String ?? "No winner"
-                print(winner)
+            //    print(winner ?? "no winner found")
                 let t1 = value["Team1"] as? [String: Any] ?? [:]
                 let t2 = value["Team2"] as? [String: Any] ?? [:]
                 let team1 = Team(dictionary: t1)
@@ -108,27 +102,18 @@ class StandingsViewController: UIViewController {
                 // if game played and recorded (there is a winner)
                 if winner != "No winner" {
                     self.writeResults(winner: winner, name: matchupName)
-                    print("called writeResults")
+                  //  print("called writeResults")
                 }
             }
-            
         }
     } // end fetch results
     
+    //write results for oneself
     func writeResults(winner: String?, name: String?) {
         if(winner == "No winner"){
             print("winner is no winner")
         }
-        //write winner to users matchups
-        self.ref.child("users").observe(DataEventType.value){
-            (snapshot) in
-            let userList = snapshot.value as! [String: [String:Any]] //?? [:]
-            for (key, _) in userList{
-                let ref3 = Database.database().reference() // new ref for new call
-                //write the winner to user/matchups
-                ref3.child("users").child(key).child("Matchups").child(Week.sharedWeek.wkString).child(name!).child("Result").setValue(winner)
-            }
-        }
+        self.ref.child("users").child(User.shared.id!).child("Matchups").child(Week.previousWeek.wkString).child(name!).child("Result").setValue(winner)
     }
     
 }
@@ -147,5 +132,18 @@ extension StandingsViewController: UITableViewDataSource {
         return cell
     }
     
+}
+
+extension StandingsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let UserHistoryVC = storyboard.instantiateViewController(withIdentifier: "UserHistoryViewController") as! UserHistoryViewController
+        UserHistoryVC.user = UserList[indexPath.item]
+        if(UserHistoryVC.user != nil){
+            print(UserHistoryVC.user?.name)
+          //  UserHistoryVC.present(UserHistoryVC, animated: true, completion: nil)
+        }
+        present(UserHistoryVC, animated: true, completion: nil)
+    }
 }
 

@@ -24,7 +24,6 @@
 		D0171E6E1FDC7CCD00DBF275 /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0171E6D1FDC7CCD00DBF275 /* DeleteAccountViewController.swift */; };
 		D0171E701FDC7CD800DBF275 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0171E6F1FDC7CD800DBF275 /* ChangePasswordViewController.swift */; };
 		D0171E721FDC7D3800DBF275 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0171E711FDC7D3800DBF275 /* SettingsViewController.swift */; };
-		D03A01AA1FDF0EBC00B0DEBB /* Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03A01A91FDF0EBC00B0DEBB /* Music.swift */; };
 		D062060F1FCDD2DE00D82FA4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D062060E1FCDD2DE00D82FA4 /* AVFoundation.framework */; };
 		D06206131FCDD63200D82FA4 /* footballImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D06206121FCDD63200D82FA4 /* footballImage.jpg */; };
 		D06206151FCDD6A700D82FA4 /* welcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06206141FCDD6A700D82FA4 /* welcomePageViewController.swift */; };
@@ -80,7 +79,6 @@
 		D0171E6D1FDC7CCD00DBF275 /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
 		D0171E6F1FDC7CD800DBF275 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		D0171E711FDC7D3800DBF275 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		D03A01A91FDF0EBC00B0DEBB /* Music.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music.swift; sourceTree = "<group>"; };
 		D062060E1FCDD2DE00D82FA4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D06206121FCDD63200D82FA4 /* footballImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = footballImage.jpg; sourceTree = "<group>"; };
 		D06206141FCDD6A700D82FA4 /* welcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomePageViewController.swift; sourceTree = "<group>"; };
@@ -197,7 +195,6 @@
 				D0171E6D1FDC7CCD00DBF275 /* DeleteAccountViewController.swift */,
 				D0171E6F1FDC7CD800DBF275 /* ChangePasswordViewController.swift */,
 				D0171E711FDC7D3800DBF275 /* SettingsViewController.swift */,
-				D03A01A91FDF0EBC00B0DEBB /* Music.swift */,
 				D067ED572117D25D00557F19 /* Week.swift */,
 			);
 			path = FootballPickEmApp;
@@ -546,7 +543,6 @@
 				D06206171FCDD9F000D82FA4 /* RegistrationViewController.swift in Sources */,
 				D0171E6E1FDC7CCD00DBF275 /* DeleteAccountViewController.swift in Sources */,
 				D0171E701FDC7CD800DBF275 /* ChangePasswordViewController.swift in Sources */,
-				D03A01AA1FDF0EBC00B0DEBB /* Music.swift in Sources */,
 				D0171E661FD7577D00DBF275 /* User.swift in Sources */,
 				D0171E581FD4B3BA00DBF275 /* UserStandingCell.swift in Sources */,
 				D0A4DA2C1FCB4ED70037D930 /* SignInViewController.swift in Sources */,

@@ -50,7 +50,7 @@ class RegistrationViewController: UIViewController {
                     User.shared.id = user?.uid // set the global user id on the app for database purposes
                     User.shared.name = user?.email
                     print("success, created new user")
-                    print (user?.email)
+                    print (user?.email ?? "no email")
                     UserDefaults.standard.set(self.usernameField.text!, forKey: "username")
                     UserDefaults.standard.set(self.passwordField.text!, forKey: "password")
                     UserDefaults.standard.synchronize()

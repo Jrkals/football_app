@@ -11,7 +11,6 @@ import Firebase
 // show the list of picks for a given user
 class UserHistoryViewController: UIViewController {
     var ref = Database.database().reference()
-    var refHandle: DatabaseHandle?
     var user: User?
     var matchupList: [[Matchup]] = [[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]
     var weekString = Week.sharedWeek.wkString
@@ -22,7 +21,6 @@ class UserHistoryViewController: UIViewController {
     var pickerOptions: [String] = ["week1", "week2", "week3", "week4", "week5", "week6",
                                    "week7", "week8", "week9", "week10", "week11", "week12",
                                    "week13", "week14", "week15", "bowls"]
-    var weekPicked: String = "week1"
     
     
     @IBOutlet weak var nameLabel: UILabel!
@@ -31,22 +29,24 @@ class UserHistoryViewController: UIViewController {
     // load matchups and put into matchupList
     // the specific data about that matchup is fetched in HistoryCell
     override func viewDidLoad() {
-        matchupList = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], []] // reset to emtpy when reloading. Fixes problem with reduplicating games
+       // print("In view did load weekString is \(weekString)")
+        print("in UHVC userid is \(user?.id ?? "no id") week is \(weekString)")
         super.viewDidLoad()
+    //    matchupList = [[], [], [], [], [], [], [], [], [], [], [], [], [], [], []] // reset to emtpy when reloading. Fixes problem with reduplicating games
+        
         weekPicker.delegate = self
         weekPicker.dataSource = self
-        nameLabel.text = user?.name ?? "no Name"
         tableView.dataSource = self
+        nameLabel.text = user?.name ?? "no Name"
         // fetch user matchups
-        ref.child("users").child((user?.id)!).child("Matchups").child(Week.sharedWeek.wkString).observe(DataEventType.value){
+        ref.child("users").child(user?.id ?? "FakeID").child("Matchups").child(weekString).observe(DataEventType.value){
             (snapshot) in
             print(snapshot)
             let matchups = snapshot.value as? [String: [String:Any]] ?? [:]
             print("MATCHUPS****************************")
-            print(matchups)
-            print("num matchups is\(self.matchupList.count)")
-            for(key, value) in matchups {
-              //  print("matchups found")
+          //  print(matchups)
+         //   print("num matchups is \(self.matchupList[self.weekInt].count)")
+            for(key, _) in matchups {
                 // make fake matchup- only need to change the matchup name
                 let date = "12-12-12" // fake date not needed
                 let team1 = Team(Conference: "fake", Logo: "fake", Losses: 0, Name: "Fake", Wins: 0, Ranking: 100)
@@ -54,7 +54,7 @@ class UserHistoryViewController: UIViewController {
                 let matchup = Matchup(t1: team1, t2: team2, dt: date, wk: self.weekInt)
                 
                 matchup.name = key
-                self.matchupList[Week.sharedWeek.wk].append(matchup)
+                self.matchupList[self.weekInt].append(matchup)
             }
             self.user?.matchups = self.matchupList
             
@@ -76,10 +76,8 @@ extension UserHistoryViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if weekInt >= (user?.matchups.count)! {
-            return 0
-        }
-        else if let matchups = user?.matchups[weekInt]{
+        if let matchups = user?.matchups[weekInt]{
+         //   print("there are for week: \(weekInt) \(user?.matchups[weekInt].count) matchups")
             return (user?.matchups[weekInt].count)!
         }
         else{
@@ -89,7 +87,8 @@ extension UserHistoryViewController: UITableViewDataSource {
     //TODO fix if no matchups
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell") as! HistoryCell
-        cell.configure(mtchp: (user?.matchups[weekInt][indexPath.item])!, usr: user)
+      //  print("weekInt is \(weekInt)")
+        cell.configure(mtchp: (user?.matchups[weekInt][indexPath.item])!, usr: user, wk: weekString)
         return cell
     }
     
@@ -98,10 +97,10 @@ extension UserHistoryViewController: UITableViewDataSource {
 //Picker stuff
 extension UserHistoryViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        weekPicked = pickerOptions[row] // set the weekpicked variable for the class
         weekString = pickerOptions[row] // update new week for DB
+        print("weekString is now \(weekString)")
         weekInt = row + 1 // starts at 0 for week 1 hence +1
-        tableView.reloadData()
+        print("weekInt is now \(weekInt)")
         viewDidLoad()
         print(pickerOptions[row])
     }

@@ -11,15 +11,9 @@ import Firebase
 import AVFoundation
 
 class SettingsViewController: UIViewController {
-    // song options
-    var pickerOptions: [String] = []//  ["bcs_theme_audio", "cbsSports", "shipping up to boston", "drumABC", "playoff", "oldABCsports"]
-        
-    @IBOutlet weak var musicPicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        musicPicker.delegate = self
-        musicPicker.dataSource = self
     }
     // sign out
     @IBAction func signOutButtonTapped(_ sender: Any) {
@@ -40,42 +34,5 @@ class SettingsViewController: UIViewController {
         self.performSegue(withIdentifier: "toDeleteAccount", sender: self)
     }
     
-    //play music
-    func playSong(songName:String){
-        
-        let song = Bundle.main.path(forResource: songName, ofType: ".mp3")
-        Music.shared.musicPlayer.stop()
-        do{
-            if let song = song{
-                try Music.shared.musicPlayer = AVAudioPlayer(contentsOf: URL(fileURLWithPath: song))
-                Music.shared.musicPlayer.play()
-            }
-        }
-        catch {
-            print(error)
-        }
-    }
-    
 }
 
-extension SettingsViewController: UIPickerViewDelegate {
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        playSong(songName: pickerOptions[row])
-        print(pickerOptions[row])
-    }
-}
-
-extension SettingsViewController: UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pickerOptions[row]
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerOptions.count
-    }
-    
-}

@@ -32,21 +32,24 @@ class User {
         name = nm
         points.append(0)
         numCorrect.append(0)
-        totalPoints = 0
-        totalCorrect = 0
+        //Read database to get totalPoints and totalCorrect up to this point
+        totalPoints = pts
+        totalCorrect = nc
     }
     
     // compare picks vs results and add or subtract points accordingly
-    func calculateCurrentPoints(user: User?, weekStr: String){
-        refHandle = ref.child("users").child((user?.id)!).child("Matchups").child(weekStr).observe(DataEventType.value){
+    func calculateCurrentPoints(weekStr: String){
+        refHandle = ref.child("users").child((self.id)!).child("Matchups").child(weekStr).observe(DataEventType.value){
             (snapshot) in
-            // User's picks
             let value = snapshot.value as? [String: [String:Any]] ?? [:]
             for(_, value) in value {
+           //     print(value["Result"] ?? "No result found")
+           //     print(value["Team"] ?? "No team found")
                 if value["Result"] as? String ?? "" == value["Team"] as? String ?? "No Team" {
                     self.totalPoints += value["Points"] as? Int ?? 0
                     self.totalCorrect += 1
-                    print("numcorrect is \(self.totalCorrect)")
+                //    print("numcorrect is \(self.totalCorrect)")
+                //    print("total points is\(self.totalCorrect)")
                 }
                 else {
                     let v2 = value["Result"] as? String ?? ""
@@ -55,11 +58,14 @@ class User {
                     }
                 }
             } // end for
-        } // end ref handle
-        print("Points and num correct:")
-        print(totalPoints)
-        print(totalCorrect)
-    } // end calculate Current points
+            
+            //Write results to DB
+            self.ref.child("users").child((self.id!)).child("Points").setValue(self.totalPoints)
+            self.ref.child("users").child((self.id!)).child("NumCorrect").setValue(self.totalCorrect)
 
-    
+        } // end ref handle
+       /* print("Points and num correct:")
+        print(totalPoints)
+        print(totalCorrect)*/
+    } // end calculate Current points
 }

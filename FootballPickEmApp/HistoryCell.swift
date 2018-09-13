@@ -18,10 +18,10 @@ class HistoryCell: UITableViewCell {
     
     var ref = Database.database().reference()
     var user: User?
-    func configure(mtchp: Matchup, usr: User?){
+    func configure(mtchp: Matchup, usr: User?, wk: String?){
         user = usr
        // print(user?.id)
-        self.ref.child("users").child((user?.id)!).child("Matchups").child(Week.sharedWeek.wkString).child(mtchp.name).observe(DataEventType.value){
+        self.ref.child("users").child((user?.id)!).child("Matchups").child(wk!).child(mtchp.name).observe(DataEventType.value){
             (snapshot) in
             let value = snapshot.value as? [String: Any] ?? [:]
             self.pickLabel.text = value["Team"] as? String ?? "No Pick"
