@@ -31,6 +31,8 @@ class RegistrationViewController: UIViewController {
     
     @objc func handleTap(){
         confirmPasswordField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+        usernameField.resignFirstResponder()
     }
     
     @IBAction func registerButtonTapped(_ sender: Any) {

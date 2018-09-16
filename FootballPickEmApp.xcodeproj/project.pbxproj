@@ -25,10 +25,10 @@
 		D0171E701FDC7CD800DBF275 /* ChangePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0171E6F1FDC7CD800DBF275 /* ChangePasswordViewController.swift */; };
 		D0171E721FDC7D3800DBF275 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0171E711FDC7D3800DBF275 /* SettingsViewController.swift */; };
 		D062060F1FCDD2DE00D82FA4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D062060E1FCDD2DE00D82FA4 /* AVFoundation.framework */; };
-		D06206131FCDD63200D82FA4 /* footballImage.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D06206121FCDD63200D82FA4 /* footballImage.jpg */; };
 		D06206151FCDD6A700D82FA4 /* welcomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06206141FCDD6A700D82FA4 /* welcomePageViewController.swift */; };
 		D06206171FCDD9F000D82FA4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06206161FCDD9F000D82FA4 /* RegistrationViewController.swift */; };
 		D067ED582117D25D00557F19 /* Week.swift in Sources */ = {isa = PBXBuildFile; fileRef = D067ED572117D25D00557F19 /* Week.swift */; };
+		D072298A214D892B005181DD /* footballImage2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D0722989214D892A005181DD /* footballImage2.jpg */; };
 		D0A4DA2C1FCB4ED70037D930 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A4DA2B1FCB4ED70037D930 /* SignInViewController.swift */; };
 		D0C25EC81FC4CE9300DB03CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C25EC71FC4CE9300DB03CD /* AppDelegate.swift */; };
 		D0C25ECD1FC4CE9300DB03CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0C25ECB1FC4CE9300DB03CD /* Main.storyboard */; };
@@ -80,10 +80,10 @@
 		D0171E6F1FDC7CD800DBF275 /* ChangePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordViewController.swift; sourceTree = "<group>"; };
 		D0171E711FDC7D3800DBF275 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D062060E1FCDD2DE00D82FA4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		D06206121FCDD63200D82FA4 /* footballImage.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = footballImage.jpg; sourceTree = "<group>"; };
 		D06206141FCDD6A700D82FA4 /* welcomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomePageViewController.swift; sourceTree = "<group>"; };
 		D06206161FCDD9F000D82FA4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		D067ED572117D25D00557F19 /* Week.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Week.swift; sourceTree = "<group>"; };
+		D0722989214D892A005181DD /* footballImage2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = footballImage2.jpg; sourceTree = "<group>"; };
 		D0A4DA2B1FCB4ED70037D930 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		D0C25EC41FC4CE9300DB03CD /* FootballPickEmApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootballPickEmApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0C25EC71FC4CE9300DB03CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -173,7 +173,7 @@
 				D0C25EC71FC4CE9300DB03CD /* AppDelegate.swift */,
 				D0C25ECB1FC4CE9300DB03CD /* Main.storyboard */,
 				D0C25ECE1FC4CE9300DB03CD /* Assets.xcassets */,
-				D06206121FCDD63200D82FA4 /* footballImage.jpg */,
+				D0722989214D892A005181DD /* footballImage2.jpg */,
 				D0C25ED01FC4CE9300DB03CD /* LaunchScreen.storyboard */,
 				D0C25ED31FC4CE9300DB03CD /* Info.plist */,
 				D0C25EF51FC4CED900DB03CD /* GoogleService-Info.plist */,
@@ -345,11 +345,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D06206131FCDD63200D82FA4 /* footballImage.jpg in Resources */,
 				D0C25ED21FC4CE9300DB03CD /* LaunchScreen.storyboard in Resources */,
 				D0C25EF61FC4CED900DB03CD /* GoogleService-Info.plist in Resources */,
 				D0C25ECF1FC4CE9300DB03CD /* Assets.xcassets in Resources */,
 				D0C25ECD1FC4CE9300DB03CD /* Main.storyboard in Resources */,
+				D072298A214D892B005181DD /* footballImage2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

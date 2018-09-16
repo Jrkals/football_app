@@ -22,7 +22,7 @@ class StandingsViewController: UIViewController {
         fetchThisWeeksResults()
         super.viewDidLoad()
         tableView.dataSource = self
-      //  tableView.delegate = self
+        tableView.delegate = self
         self.ref.child("users").observe(DataEventType.value){
             (snapshot) in
             let userList = snapshot.value as? [String: [String:Any]] ?? [:]
@@ -37,6 +37,7 @@ class StandingsViewController: UIViewController {
         }
         // Calculate one's own points for this week having read your total up to this point
         User.shared.calculateCurrentPoints(weekStr: Week.previousWeek.wkString)
+        User.shared.calculateTotalPoints()
         
        // self.tableView.reloadData()
         

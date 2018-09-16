@@ -15,6 +15,7 @@ class IndividualPickViewController: UIViewController {
     
     var matchup: Matchup?
     var pickerOptions: [String] = ["Make A Pick"] // choices for picker-will be team names
+    var teamPicked: String = ""
     
     @IBOutlet weak var warningLabel: UILabel!
     
@@ -44,6 +45,8 @@ class IndividualPickViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        confidencePointsField.keyboardType = UIKeyboardType.numberPad
+        
         recognizer = UITapGestureRecognizer(target: self, action: #selector(IndividualPickViewController.handleTap))
         view.addGestureRecognizer(recognizer!)
         picker.dataSource = self
@@ -100,9 +103,11 @@ class IndividualPickViewController: UIViewController {
     
     //make pick if valid, then go back
     @IBAction func submitButtonTapped(_ sender: Any) {
-        self.ref.child("users").child(User.shared.id!).child("Matchups").child(Week.sharedWeek.wkString).child((matchup?.name)!).child("Points").setValue(Int(confidencePointsField.text!))
+        
         guard let cpNum = Int(confidencePointsField.text!) else {return}
         if(cpNum < 11 && cpNum > 0){
+            self.ref.child("users").child(User.shared.id!).child("Matchups").child(Week.sharedWeek.wkString).child((matchup?.name)!).child("Points").setValue(Int(confidencePointsField.text!))
+            makePick(teamName: teamPicked)
             dismiss(animated: true, completion: nil)
         }
         else{
@@ -114,7 +119,8 @@ class IndividualPickViewController: UIViewController {
 
 extension IndividualPickViewController: UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        makePick(teamName: pickerOptions[row])
+       // makePick(teamName: pickerOptions[row])
+        teamPicked = pickerOptions[row]
         print(pickerOptions[row])
     }
 }

@@ -39,13 +39,13 @@
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "120x120-1.jpeg",
+      "filename" : "120x120_new.jpg",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "172x172.jpeg",
+      "filename" : "180x180_new.jpeg",
       "scale" : "3x"
     },
     {
@@ -86,7 +86,7 @@
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "ipad152.jpeg",
+      "filename" : "152X152_new.jpeg",
       "scale" : "2x"
     },
     {
@@ -98,7 +98,7 @@
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "College Football Map Original-6.jpg",
+      "filename" : "New_Logo_original copy.jpg",
       "scale" : "1x"
     }
   ],

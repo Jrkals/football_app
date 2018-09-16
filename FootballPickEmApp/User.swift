@@ -38,6 +38,7 @@ class User {
     }
     
     // compare picks vs results and add or subtract points accordingly
+    // FInds totals for each week this is not the global total
     func calculateCurrentPoints(weekStr: String){
         refHandle = ref.child("users").child((self.id)!).child("Matchups").child(weekStr).observe(DataEventType.value){
             (snapshot) in
@@ -59,13 +60,32 @@ class User {
                 }
             } // end for
             
-            //Write results to DB
-            self.ref.child("users").child((self.id!)).child("Points").setValue(self.totalPoints)
-            self.ref.child("users").child((self.id!)).child("NumCorrect").setValue(self.totalCorrect)
+            //Write weekly point total results to DB
+            self.ref.child("users").child((self.id!)).child("Weeks").child(Week.previousWeek.wkString).child("Points").setValue(self.totalPoints)
+            self.ref.child("users").child((self.id!)).child("Weeks").child(Week.previousWeek.wkString).child("NumCorrect").setValue(self.totalCorrect)
 
         } // end ref handle
        /* print("Points and num correct:")
         print(totalPoints)
         print(totalCorrect)*/
     } // end calculate Current points
+    
+    func calculateTotalPoints(){
+        var totalPoints: Int = 0
+        var totalRight: Int = 0
+        refHandle = ref.child("users").child((self.id)!).child("Weeks").observe(DataEventType.value){
+            (snapshot) in
+            let value = snapshot.value as? [String: [String:Any]] ?? [:]
+            for(_, value) in value {
+                //add to sum each time
+                totalPoints += value["Points"] as? Int ?? 0
+                totalRight += value["NumCorrect"] as? Int ?? 0
+            } // end for
+            //write results to DB
+            self.ref.child("users").child((self.id!)).child("Points").setValue(totalPoints)
+            self.ref.child("users").child((self.id!)).child("NumCorrect").setValue(totalRight)
+            
+        } // end ref handle
+    }
+    
 }
