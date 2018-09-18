@@ -37,7 +37,7 @@ class UserHistoryViewController: UIViewController {
         weekPicker.delegate = self
         weekPicker.dataSource = self
         tableView.dataSource = self
-        nameLabel.text = user?.name ?? "no Name"
+        nameLabel.text = stripEndOfEmail(name: user?.name ?? "no Name")
         // fetch user matchups
         ref.child("users").child(user?.id ?? "FakeID").child("Matchups").child(weekString).observe(DataEventType.value){
             (snapshot) in
@@ -67,6 +67,20 @@ class UserHistoryViewController: UIViewController {
     
     @IBAction func backButtonTapped(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    func stripEndOfEmail(name: String) -> String{
+        let parts = name.split(separator: "@")
+        var rv = String(describing: parts.first)
+        //  print(rv)
+        //remove last two chars which ar ")
+        rv.removeLast()
+        rv.removeLast()
+        //remove first 9 chars which are Optional("
+        for _ in 0...9{
+            rv.remove(at: rv.startIndex)
+        }
+        return rv
     }
 }
 

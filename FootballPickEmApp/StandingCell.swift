@@ -9,7 +9,6 @@
 import UIKit
 // cell in Standings VC
 class StandingCell: UITableViewCell {
-    var name: String? = ""
     var points: Int = 0
     var numCorrect: Int = 0
     
@@ -20,18 +19,24 @@ class StandingCell: UITableViewCell {
     @IBOutlet weak var numCorrectLabel: UILabel!
     
     func configure(nm: String, pts: Int, nc: Int){
-        var name = nm
         points = pts
         numCorrect = nc
-        
-        // complicated ass way to get a substring
-        if(name.count > 10){
-            let range = name.index(nm.endIndex, offsetBy: -5)..<name.endIndex
-            name.removeSubrange(range)
-        }
-        
-        emailLabel.text = name
+        emailLabel.text = stripEndOfEmail(name: nm)
         pointsLabel.text = String(describing: points)
         numCorrectLabel.text = String(describing: numCorrect)
+    }
+    
+    func stripEndOfEmail(name: String) -> String{
+        let parts = name.split(separator: "@")
+        var rv = String(describing: parts.first)
+      //  print(rv)
+        //remove last two chars which ar ")
+        rv.removeLast()
+        rv.removeLast()
+        //remove first 9 chars which are Optional("
+        for _ in 0...9{
+            rv.remove(at: rv.startIndex)
+        }
+        return rv
     }
 }
