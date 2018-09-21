@@ -17,6 +17,7 @@ class GroupViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     // loads list of users and presents their names
     override func viewDidLoad() {
+        UserList = []
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self

@@ -40,6 +40,8 @@ class User {
     // compare picks vs results and add or subtract points accordingly
     // FInds totals for each week this is not the global total
     func calculateCurrentPoints(weekStr: String){
+        self.totalPoints = 0
+        self.totalCorrect = 0
         refHandle = ref.child("users").child((self.id)!).child("Matchups").child(weekStr).observe(DataEventType.value){
             (snapshot) in
             let value = snapshot.value as? [String: [String:Any]] ?? [:]

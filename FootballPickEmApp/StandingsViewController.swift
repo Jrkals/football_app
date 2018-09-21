@@ -22,13 +22,14 @@ class StandingsViewController: UIViewController {
         fetchThisWeeksResults()
         super.viewDidLoad()
         tableView.dataSource = self
-        tableView.delegate = self
+    //    tableView.delegate = self
+        UserList = [] // empty out before reading
         self.ref.child("users").observe(DataEventType.value){
             (snapshot) in
             let userList = snapshot.value as? [String: [String:Any]] ?? [:]
            // print(userList)
             for (_, value) in userList{
-                let newUser = User(nm: value["Name"] as? String ?? "NoName", pts: value["Points"] as? Int ?? -10000, nc: value["NumCorrect"] as? Int ?? 0)
+                let newUser = User(nm: value["Name"] as? String ?? "NoName", pts: value["Points"] as? Int ?? -10, nc: value["NumCorrect"] as? Int ?? 0)
                 self.UserList.append(newUser)
             }
             DispatchQueue.main.async {
