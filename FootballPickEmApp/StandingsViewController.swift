@@ -85,6 +85,9 @@ class StandingsViewController: UIViewController {
     //TODO fix name of matchup in DB
     //Fetch this weeks results from matchups and write the result to users...matchups
     func fetchThisWeeksResults() {
+        if(User.shared.isAnonymous){
+            return
+        }
         var winner: String?
         var matchupName: String?
         self.ref.child("matchups").child(Week.previousWeek.wkString).observe(DataEventType.value){

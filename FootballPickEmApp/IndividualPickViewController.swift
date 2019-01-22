@@ -43,9 +43,13 @@ class IndividualPickViewController: UIViewController {
     
     var recognizer: UITapGestureRecognizer?
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         confidencePointsField.keyboardType = UIKeyboardType.numberPad
+        confidencePointsField.returnKeyType = UIReturnKeyType.done
+        confidencePointsField.delegate = self
         
         recognizer = UITapGestureRecognizer(target: self, action: #selector(IndividualPickViewController.handleTap))
         view.addGestureRecognizer(recognizer!)
@@ -75,14 +79,12 @@ class IndividualPickViewController: UIViewController {
             DispatchQueue.main.async {
                 self.team1Image.image = image
             }
-            
         }
         ImageService.shared.fetchImage(url: (matchup?.team2?.logo)!) {
             (image) in
             DispatchQueue.main.async {
                 self.team2Image.image = image
             }
-            
         }
         pickerOptions.append((matchup?.team1?.name)!)
         pickerOptions.append((matchup?.team2?.name)!)
@@ -92,8 +94,8 @@ class IndividualPickViewController: UIViewController {
     @objc func handleTap(){
         confidencePointsField.resignFirstResponder()
     }
-    // upload pick to database
-    func makePick(teamName: String){
+    // upload the name of the team picked to database
+    func makeTeamPick(teamName: String){
         self.ref.child("users").child(User.shared.id!).child("Matchups").child(Week.sharedWeek.wkString).child((matchup?.name)!).child("Team").setValue(teamName)
     }
     
@@ -101,13 +103,12 @@ class IndividualPickViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    //make pick if valid, then go back
-    @IBAction func submitButtonTapped(_ sender: Any) {
-        
+    //picks team name AND points
+    func makePick(){
         guard let cpNum = Int(confidencePointsField.text!) else {return}
-        if(cpNum < 11 && cpNum > 0){
+        if(cpNum < 10 && cpNum > 0){
             self.ref.child("users").child(User.shared.id!).child("Matchups").child(Week.sharedWeek.wkString).child((matchup?.name)!).child("Points").setValue(Int(confidencePointsField.text!))
-            makePick(teamName: teamPicked)
+            makeTeamPick(teamName: teamPicked)
             dismiss(animated: true, completion: nil)
         }
         else{
@@ -115,6 +116,10 @@ class IndividualPickViewController: UIViewController {
         }
     }
     
+    //make pick if valid, then go back
+    @IBAction func submitButtonTapped(_ sender: Any) {
+        makePick()
+    }
 }
 
 extension IndividualPickViewController: UIPickerViewDelegate {
@@ -137,5 +142,19 @@ extension IndividualPickViewController: UIPickerViewDataSource {
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerOptions.count
     }
-    
+}
+
+//TODO need to fix this
+extension IndividualPickViewController: UITextFieldDelegate{
+    // once a number is done it should end editing
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        let x = Int(confidencePointsField.text ?? "")
+        let y = x ?? 0
+        var rv: Bool = false
+        if(y > 0 && y < 10){
+            rv = true
+            print("should be dismissing keyboard")
+        }
+        return rv
+    }
 }

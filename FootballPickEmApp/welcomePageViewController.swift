@@ -20,13 +20,18 @@ class WelcomePageViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var currentWeekLabel: UILabel!
+    @IBOutlet weak var databaseMessageLabel: UILabel!
     
     // load table view from Firebase and display matchups
     override func viewDidLoad() {
         super.viewDidLoad()
+        matchups = [] // empty list to avoid repeats when re-loading
         imageView.image = #imageLiteral(resourceName: "footballImage.jpg")
         tableView.dataSource = self
         tableView.delegate = self
+        currentWeekLabel.text = Week.sharedWeek.wkString
+        databaseMessageLabel.text = Message.sharedMessage.messageString
         // load from Firebase
         
         refHandle = ref.child("matchups").child(Week.sharedWeek.wkString).observe(DataEventType.value){

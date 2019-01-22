@@ -27,6 +27,7 @@ class User {
     
     var totalPoints: Int
     var totalCorrect: Int
+    var isAnonymous: Bool
     
     init(nm: String?, pts: Int, nc: Int) {
         name = nm
@@ -35,11 +36,15 @@ class User {
         //Read database to get totalPoints and totalCorrect up to this point
         totalPoints = pts
         totalCorrect = nc
+        isAnonymous = false
     }
     
     // compare picks vs results and add or subtract points accordingly
     // FInds totals for each week this is not the global total
     func calculateCurrentPoints(weekStr: String){
+        if isAnonymous{
+            return
+        }
         self.totalPoints = 0
         self.totalCorrect = 0
         refHandle = ref.child("users").child((self.id)!).child("Matchups").child(weekStr).observe(DataEventType.value){
@@ -73,6 +78,9 @@ class User {
     } // end calculate Current points
     
     func calculateTotalPoints(){
+        if isAnonymous{
+            return
+        }
         var totalPoints: Int = 0
         var totalRight: Int = 0
         refHandle = ref.child("users").child((self.id)!).child("Weeks").observe(DataEventType.value){

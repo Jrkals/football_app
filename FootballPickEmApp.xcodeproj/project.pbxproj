@@ -37,6 +37,7 @@
 		D0C25EDD1FC4CE9300DB03CD /* FootballPickEmAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C25EDC1FC4CE9300DB03CD /* FootballPickEmAppTests.swift */; };
 		D0C25EE81FC4CE9300DB03CD /* FootballPickEmAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C25EE71FC4CE9300DB03CD /* FootballPickEmAppUITests.swift */; };
 		D0C25EF61FC4CED900DB03CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D0C25EF51FC4CED900DB03CD /* GoogleService-Info.plist */; };
+		D0D4E7B82174094E009F7DB9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D4E7B72174094E009F7DB9 /* Message.swift */; };
 		D3DF75AE937C72B0DCAF4F3F /* Pods_FootballPickEmAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314A02F284A7662B35A6F1D4 /* Pods_FootballPickEmAppUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +99,7 @@
 		D0C25EE71FC4CE9300DB03CD /* FootballPickEmAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballPickEmAppUITests.swift; sourceTree = "<group>"; };
 		D0C25EE91FC4CE9300DB03CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0C25EF51FC4CED900DB03CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D0D4E7B72174094E009F7DB9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		D42267B1E43C31E0DB57D9F5 /* Pods-FootballPickEmAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballPickEmAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootballPickEmAppUITests/Pods-FootballPickEmAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DE5736D4E70BE6A1BCE47558 /* Pods-FootballPickEmApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballPickEmApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootballPickEmApp/Pods-FootballPickEmApp.debug.xcconfig"; sourceTree = "<group>"; };
 		EF133FBF85CEC671AEB76F82 /* Pods-FootballPickEmAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootballPickEmAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootballPickEmAppTests/Pods-FootballPickEmAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				D0171E6F1FDC7CD800DBF275 /* ChangePasswordViewController.swift */,
 				D0171E711FDC7D3800DBF275 /* SettingsViewController.swift */,
 				D067ED572117D25D00557F19 /* Week.swift */,
+				D0D4E7B72174094E009F7DB9 /* Message.swift */,
 			);
 			path = FootballPickEmApp;
 			sourceTree = "<group>";
@@ -541,6 +544,7 @@
 				D0171E681FD9C90200DBF275 /* StandingCell.swift in Sources */,
 				D0171E561FD4AFD100DBF275 /* GroupViewController.swift in Sources */,
 				D06206171FCDD9F000D82FA4 /* RegistrationViewController.swift in Sources */,
+				D0D4E7B82174094E009F7DB9 /* Message.swift in Sources */,
 				D0171E6E1FDC7CCD00DBF275 /* DeleteAccountViewController.swift in Sources */,
 				D0171E701FDC7CD800DBF275 /* ChangePasswordViewController.swift in Sources */,
 				D0171E661FD7577D00DBF275 /* User.swift in Sources */,

@@ -62,5 +62,9 @@ class RegistrationViewController: UIViewController {
         }
     }
     
+    @IBAction func backButtomTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     
 }

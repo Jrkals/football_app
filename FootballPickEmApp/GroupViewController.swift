@@ -13,6 +13,17 @@ class GroupViewController: UIViewController {
     
     var ref = Database.database().reference()
     var UserList: [User] = [] // add self to list
+    @IBAction func myPicksButtonTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "ToMyPicks", sender: self)
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? UserHistoryViewController else { return }
+        guard let source = sender as? GroupViewController else { return }
+        destination.user = User.shared
+    }
     
     @IBOutlet weak var tableView: UITableView!
     // loads list of users and presents their names
